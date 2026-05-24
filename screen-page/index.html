@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen — N.Q.A</title>
+    <link rel="stylesheet" href="screen-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="root">
+
+    <!-- ================= NAVBAR ================= -->
+    <header>
+        <nav id="navbar">
+            <a href="index.html" id="logo">N·Q·A</a>
+            <div id="nav-links">
+                <a href="#">Home</a>
+                <a href="#">Garden</a>
+                <a href="#">Library</a>
+                <a href="#">Writing</a>
+                <a href="#" class="active">Screen</a>
+            </div>
+            <div id="nav-buttons">
+                <button id="theme-btn">Change Theme</button>
+                <button id="signin-btn">Sign In</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ================= SCREEN HERO ================= -->
+    <section id="screen-hero">
+        <div class="screen-hero-inner">
+            <p class="section-tag scroll-reveal">The Watchlist</p>
+            <h1 class="scroll-reveal">Screen</h1>
+            <p class="screen-desc scroll-reveal">
+                Films and series — some watched, some loved, some regretted.<br>
+                Entries marked <em>my pick</em> are things I found and added myself.<br>
+                Click any row for a description, a verdict, and the conversation below.
+            </p>
+        </div>
+    </section>
+
+    <!-- ================= FILTER BAR ================= -->
+    <section id="filter-section">
+        <div class="filter-inner">
+
+            <div class="filter-row">
+                <button class="filter-btn active" data-filter="all" data-group="type">All (39)</button>
+                <button class="filter-btn" data-filter="film" data-group="type">Films (10)</button>
+                <button class="filter-btn" data-filter="series" data-group="type">Series (29)</button>
+            </div>
+
+            <div class="filter-row">
+                <button class="filter-btn active" data-filter="all" data-group="verdict">All Verdicts</button>
+                <button class="filter-btn" data-filter="must-watch" data-group="verdict">Must Watch</button>
+                <button class="filter-btn" data-filter="watch" data-group="verdict">Watch</button>
+                <button class="filter-btn" data-filter="depends" data-group="verdict">Depends</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= WATCHLIST TABLE ================= -->
+    <section id="watchlist-section">
+        <div class="watchlist-inner">
+
+            <div class="table-header">
+                <span>Title</span>
+                <span>Verdict</span>
+            </div>
+
+            <!-- ENTRIES — each is a .entry row -->
+            <div id="entries-list">
+
+                <div class="entry" data-type="series" data-verdict="must-watch" data-id="mirzapur">
+                    <div class="entry-main">
+                        <div class="entry-left">
+                            <span class="entry-title">Mirzapur</span>
+                            <span class="entry-meta">2018– · Series · Crime / Thriller · Prime Video</span>
+                        </div>
+                        <div class="entry-right">
+                            <span class="verdict must-watch">Must Watch</span>
+                            <span class="stars" data-rating="5">★★★★★</span>
+                        </div>
+                    </div>
+                    <div class="entry-expand">
+                        <p class="entry-desc">Raw, violent, and unapologetically Indian. Mirzapur is one of those rare shows that feels genuinely alive — not polished to a global template. The world it builds in the Purvanchal belt is rich and unforgettable.</p>
+                        <div class="comment-section" data-entry="mirzapur">
+                            <div class="comments-list"></div>
+                            <div class="comment-form">
+                                <input type="text" class="comment-name" placeholder="Your name" maxlength="40">
+                                <textarea class="comment-text" placeholder="Leave a thought…" rows="2" maxlength="500"></textarea>
+                                <button class="comment-submit">Post</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="entry" data-type="series" data-verdict="must-watch" data-id="kota-factory">
+                    <div class="entry-main">
+                        <div class="entry-left">
+                            <span class="entry-title">Kota Factory</span>
+                            <span class="entry-meta">2019– · Series · Drama · Netflix / TVF</span>
+                        </div>
+                        <div class="entry-right">
+                            <span class="verdict must-watch">Must Watch</span>
+                            <span class="stars" data-rating="5">★★★★★</span>
+                        </div>
+                    </div>
+                    <div class="entry-expand">
+                        <p class="entry-desc">Shot in black and white, it shouldn't work as well as it does. But it does. Jeetu Bhaiya is perhaps the most genuinely inspiring fictional mentor I've encountered — the show earns every tear.</p>
+                        <div class="comment-section" data-entry="kota-factory">
+                            <div class="comments-list"></div>
+                            <div class="comment-form">
+                                <input type="text" class="comment-name" placeholder="Your name" maxlength="40">
+                                <textarea class="comment-text" placeholder="Leave a thought…" rows="2" maxlength="500"></textarea>
+                                <button class="comment-submit">Post</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="entry" data-type="film" data-verdict="watch" data-id="laal-singh">
+                    <div class="entry-main">
+                        <div class="entry-left">
+                            <span class="entry-title">Laal Singh Chaddha</span>
+                            <span class="entry-meta">2022 · Film · Drama · Netflix</span>
+                        </div>
+                        <div class="entry-right">
+                            <span class="verdict watch">Watch</span>
+                            <span class="stars" data-rating="3">★★★☆☆</span>
+                        </div>
+                    </div>
+                    <div class="entry-expand">
+                        <p class="entry-desc">A sincere but uneven adaptation. Aamir puts everything in, and some sequences are genuinely moving. But the film never quite escapes the shadow of the original, nor does it fully become its own thing.</p>
+                        <div class="comment-section" data-entry="laal-singh">
+                            <div class="comments-list"></div>
+                            <div class="comment-form">
+                                <input type="text" class="comment-name" placeholder="Your name" maxlength="40">
+                                <textarea class="comment-text" placeholder="Leave a thought…" rows="2" maxlength="500"></textarea>
+                                <button class="comment-submit">Post</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="entry" data-type="film" data-verdict="must-watch" data-id="kill">
+                    <div class="entry-main">
+                        <div class="entry-left">
+                            <span class="entry-title">Kill</span>
+                            <span class="entry-meta">2023 · Film · Action / Thriller · Netflix</span>
+                        </div>
+                        <div class="entry-right">
+                            <span class="verdict must-watch">Must Watch</span>
+                            <span class="stars" data-rating="4">★★★★☆</span>
+                        </div>
+                    </div>
+                    <div class="entry-expand">
+                        <p class="entry-desc">Claustrophobic, relentless, and completely unafraid of its own brutality. Kill earns its reputation. Indian action cinema found a new ceiling here. Not for the faint-hearted.</p>
+                        <div class="comment-section" data-entry="kill">
+                            <div class="comments-list"></div>
+                            <div class="comment-form">
+                                <input type="text" class="comment-name" placeholder="Your name" maxlength="40">
+                                <textarea class="comment-text" placeholder="Leave a thought…" rows="2" maxlength="500"></textarea>
+                                <button class="comment-submit">Post</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="entry" data-type="series" data-verdict="must-watch" data-id="got">
+                    <div class="entry-main">
+                        <div class="entry-left">
+                            <span class="entry-title">Game of Thrones</span>
+                            <span class="entry-meta">2011–2019 · Series · Fantasy / Drama · HBO / JioCinema</span>
+                        </div>
+                        <div class="entry-right">
+                            <span class="verdict must-watch">Must Watch</span>
+                            <span class="stars" data-rating="4">★★★★☆</span>
+                        </div>
+                    </div>
+                    <div class="entry-expand">
+                        <p class="entry-desc">Seasons 1–4 are nearly perfect television. The last two seasons are a cautionary tale about what happens when ambition meets deadline. Still essential. The fall just makes it more interesting to think about.</p>
+                        <div class="comment-section" data-entry="got">
+                            <div class="comments-list"></div>
+                            <div class="comment-form">
+                                <input type="text" class="comment-name" placeholder="Your name" maxlength="40">
+                                <textarea class="comment-text" placeholder="Leave a thought…" rows="2" maxlength="500"></textarea>
+                                <button class="comment-submit">Post</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="entry" data-type="series" data-verdict="must-watch" data-id="hotd">
+                    <div class="entry-main">
+                        <div class="entry-left">
+                            <span class="entry-title">House of the Dragon</span>
+                            <span class="entry-meta">2022– · Series · Fantasy / Drama · HBO / JioCinema</span>
+                        </div>
+                        <div class="entry-right">
+                            <span class="verdict must-watch">Must Watch</span>
+                            <span class="stars" data-rating="4">★★★★☆</span>
+                        </div>
+                    </div>
+                    <div class="entry-expand">
+                        <p class="entry-desc">Slower, more politically intricate than its predecessor. The tragedy here is structural — you know roughly where it ends, which makes watching the characters walk toward it quietly devastating.</p>
+                        <div class="comment-section" data-entry="hotd">
+                            <div class="comments-list"></div>
+                            <div class="comment-form">
+                                <input type="text" class="comment-name" placeholder="Your name" maxlength="40">
+                                <textarea class="comment-text" placeholder="Leave a thought…" rows="2" maxlength="500"></textarea>
+                                <button class="comment-submit">Post</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="entry" data-type="series" data-verdict="depends" data-id="knight-seven">
+                    <div class="entry-main">
+                        <div class="entry-left">
+                            <span class="entry-title">The Knight of Seven Kingdoms</span>
+                            <span class="entry-meta">2024– · Series · Fantasy · HBO / JioCinema</span>
+                        </div>
+                        <div class="entry-right">
+                            <span class="verdict depends">Depends</span>
+                            <span class="stars" data-rating="3">★★★☆☆</span>
+                        </div>
+                    </div>
+                    <div class="entry-expand">
+                        <p class="entry-desc">A quieter entry into the Westerosi universe. Dunk and Egg are charming companions. If you're already fatigued by the world-building, skip it. If you love the lore, it's a gentle pleasure.</p>
+                        <div class="comment-section" data-entry="knight-seven">
+                            <div class="comments-list"></div>
+                            <div class="comment-form">
+                                <input type="text" class="comment-name" placeholder="Your name" maxlength="40">
+                                <textarea class="comment-text" placeholder="Leave a thought…" rows="2" maxlength="500"></textarea>
+                                <button class="comment-submit">Post</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="entry" data-type="series" data-verdict="must-watch" data-id="breaking-bad">
+                    <div class="entry-main">
+                        <div class="entry-left">
+                            <span class="entry-title">Breaking Bad</span>
+                            <span class="entry-meta">2008–2013 · Series · Drama / Thriller · Netflix</span>
+                        </div>
+                        <div class="entry-right">
+                            <span class="verdict must-watch">Must Watch</span>
+                            <span class="stars" data-rating="5">★★★★★</span>
+                        </div>
+                    </div>
+                    <div class="entry-expand">
+                        <p class="entry-desc">Still the gold standard for character transformation on television. Every frame is intentional. The descent of Walter White is the most meticulously crafted tragedy I've watched. Required viewing.</p>
+                        <div class="comment-section" data-entry="breaking-bad">
+                            <div class="comments-list"></div>
+                            <div class="comment-form">
+                                <input type="text" class="comment-name" placeholder="Your name" maxlength="40">
+                                <textarea class="comment-text" placeholder="Leave a thought…" rows="2" maxlength="500"></textarea>
+                                <button class="comment-submit">Post</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="entry" data-type="film" data-verdict="must-watch" data-id="oppenheimer" data-my-pick>
+                    <div class="entry-main">
+                        <div class="entry-left">
+                            <span class="entry-title">Oppenheimer <em class="my-pick-tag">my pick</em></span>
+                            <span class="entry-meta">2023 · Film · Drama / Historical · Prime Video</span>
+                        </div>
+                        <div class="entry-right">
+                            <span class="verdict must-watch">Must Watch</span>
+                            <span class="stars" data-rating="5">★★★★★</span>
+                        </div>
+                    </div>
+                    <div class="entry-expand">
+                        <p class="entry-desc">Three hours that feel like a reckoning. Nolan finally found a subject worthy of his ambition. The physics, the politics, the moral collapse — all held together by Cillian Murphy's extraordinary stillness.</p>
+                        <div class="comment-section" data-entry="oppenheimer">
+                            <div class="comments-list"></div>
+                            <div class="comment-form">
+                                <input type="text" class="comment-name" placeholder="Your name" maxlength="40">
+                                <textarea class="comment-text" placeholder="Leave a thought…" rows="2" maxlength="500"></textarea>
+                                <button class="comment-submit">Post</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="entry" data-type="series" data-verdict="must-watch" data-id="chernobyl">
+                    <div class="entry-main">
+                        <div class="entry-left">
+                            <span class="entry-title">Chernobyl</span>
+                            <span class="entry-meta">2019 · Series · Drama / Historical · JioCinema</span>
+                        </div>
+                        <div class="entry-right">
+                            <span class="verdict must-watch">Must Watch</span>
+                            <span class="stars" data-rating="5">★★★★★</span>
+                        </div>
+                    </div>
+                    <div class="entry-expand">
+                        <p class="entry-desc">The cost of lies — institutional, political, human. Five episodes that function as both disaster drama and quiet philosophical horror. Legasov's monologue in the finale stays with you.</p>
+                        <div class="comment-section" data-entry="chernobyl">
+                            <div class="comments-list"></div>
+                            <div class="comment-form">
+                                <input type="text" class="comment-name" placeholder="Your name" maxlength="40">
+                                <textarea class="comment-text" placeholder="Leave a thought…" rows="2" maxlength="500"></textarea>
+                                <button class="comment-submit">Post</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /#entries-list -->
+
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer id="footer">
+        <div id="footer-left">
+            <a href="index.html" class="footer-title">Not Quite Ayush</a>
+            <p>A quiet space for questions that don't end, and answers that quietly dissolve.</p>
+        </div>
+        <div class="footer-column">
+            <p class="footer-heading">Explore</p>
+            <a href="#">Garden</a>
+            <a href="#">Library</a>
+            <a href="#">Writing</a>
+            <a href="#">Screen</a>
+        </div>
+        <div class="footer-column">
+            <p class="footer-heading">Find Me</p>
+            <a href="https://instagram.com">Instagram</a>
+            <a href="https://linkedin.com">LinkedIn</a>
+            <a href="https://x.com">X</a>
+            <a href="https://telegram.org">Telegram</a>
+        </div>
+        <div class="footer-column">
+            <p class="footer-heading">Quote</p>
+            <p>"The important thing is not to stop questioning."</p>
+        </div>
+    </footer>
+
+</div><!-- /#root -->
+
+<script src="screen-script.js"></script>
+</body>
+</html>
