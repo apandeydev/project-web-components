@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library — N.Q.A</title>
+    <link rel="stylesheet" href="library.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="root">
+
+    <!-- ================= NAVBAR ================= -->
+    <header>
+        <nav id="navbar">
+            <a href="../index.html" id="logo">N.Q.A</a>
+            <div id="nav-links">
+                <a href="#">Home</a>
+                <a href="#" class="active">Library</a>
+                <a href="#">Garden</a>
+                <a href="#">Writing</a>
+                <a href="#">Screen</a>
+            </div>
+            <div id="nav-buttons">
+                <button id="theme-btn">Change Theme</button>
+                <button id="signin-btn">Sign In</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ================= PAGE HEADER ================= -->
+    <section id="page-header">
+        <div class="page-header-inner">
+            <p class="section-tag">personal archive</p>
+            <h1>The <em>Library</em></h1>
+            <p class="page-subtitle">Books that left a mark. Annotated, reflected upon, catalogued slowly.</p>
+        </div>
+        <div id="library-meta">
+            <div class="meta-stat">
+                <span class="meta-number" data-target="24">0</span>
+                <span class="meta-label">books read</span>
+            </div>
+            <div class="meta-divider"></div>
+            <div class="meta-stat">
+                <span class="meta-number" data-target="6">0</span>
+                <span class="meta-label">in progress</span>
+            </div>
+            <div class="meta-divider"></div>
+            <div class="meta-stat">
+                <span class="meta-number" data-target="11">0</span>
+                <span class="meta-label">on the shelf</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FILTER BAR ================= -->
+    <div id="filter-bar">
+        <div id="filter-inner">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="philosophy">Philosophy</button>
+            <button class="filter-btn" data-filter="physics">Physics</button>
+            <button class="filter-btn" data-filter="literature">Literature</button>
+            <button class="filter-btn" data-filter="consciousness">Consciousness</button>
+            <button class="filter-btn" data-filter="mathematics">Mathematics</button>
+        </div>
+    </div>
+
+    <!-- ================= BOOK LIST ================= -->
+    <main id="library-list">
+
+        <!-- ── BOOK CARD 1 ── -->
+        <article class="book-card" data-category="philosophy consciousness">
+
+            <div class="book-cover-wrap">
+                <!-- Cover: placeholder gradient, will be replaced by real cover from DB -->
+                <div class="book-cover" style="--cover-a:#1a0a2e;--cover-b:#0d1b2a;">
+                    <div class="cover-texture"></div>
+                    <div class="cover-title-wrap">
+                        <span class="cover-title">Gödel, Escher, Bach</span>
+                        <span class="cover-author">Hofstadter</span>
+                    </div>
+                    <div class="cover-spine"></div>
+                </div>
+                <div class="book-shadow"></div>
+                <div class="book-status read">Read</div>
+            </div>
+
+            <div class="book-body">
+
+                <div class="book-info">
+                    <div class="book-info-top">
+                        <div>
+                            <h2 class="book-title">Gödel, Escher, Bach: An Eternal Golden Braid</h2>
+                            <p class="book-author">Douglas R. Hofstadter</p>
+                        </div>
+                        <span class="book-year">1979</span>
+                    </div>
+                    <p class="book-description">
+                        A metaphorical fugue on minds and machines in the spirit of Lewis Carroll — weaving together Gödel's incompleteness theorems, Escher's visual paradoxes, and Bach's musical structures into a meditation on consciousness and self-reference.
+                    </p>
+                    <div class="book-tags">
+                        <span class="tag">Philosophy</span>
+                        <span class="tag">Consciousness</span>
+                        <span class="tag">Mathematics</span>
+                    </div>
+                </div>
+
+                <div class="book-divider"></div>
+
+                <div class="book-thoughts">
+                    <p class="thoughts-label">What I Think</p>
+                    <blockquote class="thoughts-text">
+                        This book didn't just change how I think — it changed how I think about thinking. The strange loops Hofstadter constructs feel less like metaphors and more like mirrors. I keep returning to the Ant Fugue.
+                    </blockquote>
+                    <div class="thoughts-rating">
+                        <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span>
+                    </div>
+                </div>
+
+                <div class="book-divider"></div>
+
+                <div class="book-links">
+                    <p class="links-label">References</p>
+                    <div class="links-row">
+                        <a href="#" class="link-chip" data-type="buy">
+                            <span class="link-icon">↗</span>
+                            <span>Buy</span>
+                        </a>
+                        <a href="#" class="link-chip" data-type="article">
+                            <span class="link-icon">◎</span>
+                            <span>Essay</span>
+                        </a>
+                        <a href="#" class="link-chip" data-type="wiki">
+                            <span class="link-icon">⊕</span>
+                            <span>Wikipedia</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </article>
+
+        <!-- ── BOOK CARD 2 ── -->
+        <article class="book-card" data-category="philosophy">
+
+            <div class="book-cover-wrap">
+                <div class="book-cover" style="--cover-a:#0a1a0f;--cover-b:#1a2a1a;">
+                    <div class="cover-texture"></div>
+                    <div class="cover-title-wrap">
+                        <span class="cover-title">Being and Time</span>
+                        <span class="cover-author">Heidegger</span>
+                    </div>
+                    <div class="cover-spine"></div>
+                </div>
+                <div class="book-shadow"></div>
+                <div class="book-status reading">Reading</div>
+            </div>
+
+            <div class="book-body">
+
+                <div class="book-info">
+                    <div class="book-info-top">
+                        <div>
+                            <h2 class="book-title">Being and Time</h2>
+                            <p class="book-author">Martin Heidegger</p>
+                        </div>
+                        <span class="book-year">1927</span>
+                    </div>
+                    <p class="book-description">
+                        A foundational text of existential philosophy, asking what it means to exist in time — introducing concepts like Dasein, thrownness, and authenticity that permanently reshaped 20th-century thought.
+                    </p>
+                    <div class="book-tags">
+                        <span class="tag">Philosophy</span>
+                        <span class="tag">Existentialism</span>
+                        <span class="tag">Ontology</span>
+                    </div>
+                </div>
+
+                <div class="book-divider"></div>
+
+                <div class="book-thoughts">
+                    <p class="thoughts-label">What I Think</p>
+                    <blockquote class="thoughts-text">
+                        Dense and demanding, but every ten pages there's a sentence that makes the difficulty worthwhile. The idea of being-toward-death doesn't terrify me as much as it clarifies. Still working through it.
+                    </blockquote>
+                    <div class="thoughts-rating">
+                        <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span>
+                    </div>
+                </div>
+
+                <div class="book-divider"></div>
+
+                <div class="book-links">
+                    <p class="links-label">References</p>
+                    <div class="links-row">
+                        <a href="#" class="link-chip" data-type="buy">
+                            <span class="link-icon">↗</span>
+                            <span>Buy</span>
+                        </a>
+                        <a href="#" class="link-chip" data-type="article">
+                            <span class="link-icon">◎</span>
+                            <span>Stanford SEP</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </article>
+
+        <!-- ── BOOK CARD 3 ── -->
+        <article class="book-card" data-category="physics">
+
+            <div class="book-cover-wrap">
+                <div class="book-cover" style="--cover-a:#1a1000;--cover-b:#2a2010;">
+                    <div class="cover-texture"></div>
+                    <div class="cover-title-wrap">
+                        <span class="cover-title">The Fabric of Reality</span>
+                        <span class="cover-author">Deutsch</span>
+                    </div>
+                    <div class="cover-spine"></div>
+                </div>
+                <div class="book-shadow"></div>
+                <div class="book-status read">Read</div>
+            </div>
+
+            <div class="book-body">
+
+                <div class="book-info">
+                    <div class="book-info-top">
+                        <div>
+                            <h2 class="book-title">The Fabric of Reality</h2>
+                            <p class="book-author">David Deutsch</p>
+                        </div>
+                        <span class="book-year">1997</span>
+                    </div>
+                    <p class="book-description">
+                        Deutsch argues that four fundamental strands — quantum physics, epistemology, evolution, and computation — together form a unified theory of everything. Bold, rigorous, and deeply optimistic about human knowledge.
+                    </p>
+                    <div class="book-tags">
+                        <span class="tag">Physics</span>
+                        <span class="tag">Epistemology</span>
+                        <span class="tag">Quantum</span>
+                    </div>
+                </div>
+
+                <div class="book-divider"></div>
+
+                <div class="book-thoughts">
+                    <p class="thoughts-label">What I Think</p>
+                    <blockquote class="thoughts-text">
+                        Deutsch writes like someone who genuinely believes in the infinite reach of knowledge — and it's infectious. The many-worlds interpretation handled here with more clarity than anywhere else I've read.
+                    </blockquote>
+                    <div class="thoughts-rating">
+                        <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span>
+                    </div>
+                </div>
+
+                <div class="book-divider"></div>
+
+                <div class="book-links">
+                    <p class="links-label">References</p>
+                    <div class="links-row">
+                        <a href="#" class="link-chip" data-type="buy">
+                            <span class="link-icon">↗</span>
+                            <span>Buy</span>
+                        </a>
+                        <a href="#" class="link-chip" data-type="article">
+                            <span class="link-icon">◎</span>
+                            <span>Review</span>
+                        </a>
+                        <a href="#" class="link-chip" data-type="video">
+                            <span class="link-icon">▷</span>
+                            <span>Talk</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </article>
+
+        <!-- ── BOOK CARD 4 ── -->
+        <article class="book-card" data-category="literature">
+
+            <div class="book-cover-wrap">
+                <div class="book-cover" style="--cover-a:#1a0808;--cover-b:#2a1010;">
+                    <div class="cover-texture"></div>
+                    <div class="cover-title-wrap">
+                        <span class="cover-title">The Brothers Karamazov</span>
+                        <span class="cover-author">Dostoevsky</span>
+                    </div>
+                    <div class="cover-spine"></div>
+                </div>
+                <div class="book-shadow"></div>
+                <div class="book-status read">Read</div>
+            </div>
+
+            <div class="book-body">
+
+                <div class="book-info">
+                    <div class="book-info-top">
+                        <div>
+                            <h2 class="book-title">The Brothers Karamazov</h2>
+                            <p class="book-author">Fyodor Dostoevsky</p>
+                        </div>
+                        <span class="book-year">1880</span>
+                    </div>
+                    <p class="book-description">
+                        Dostoevsky's final novel — a philosophical and spiritual drama about faith, doubt, free will, and moral responsibility, centred around three brothers and a murdered father. Often called the greatest novel ever written.
+                    </p>
+                    <div class="book-tags">
+                        <span class="tag">Literature</span>
+                        <span class="tag">Philosophy</span>
+                        <span class="tag">Russian</span>
+                    </div>
+                </div>
+
+                <div class="book-divider"></div>
+
+                <div class="book-thoughts">
+                    <p class="thoughts-label">What I Think</p>
+                    <blockquote class="thoughts-text">
+                        The Grand Inquisitor chapter alone is worth the whole read. Ivan's argument against God isn't answered — it's absorbed. Alyosha doesn't debate him; he kisses him. That said more than any rebuttal could.
+                    </blockquote>
+                    <div class="thoughts-rating">
+                        <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span>
+                    </div>
+                </div>
+
+                <div class="book-divider"></div>
+
+                <div class="book-links">
+                    <p class="links-label">References</p>
+                    <div class="links-row">
+                        <a href="#" class="link-chip" data-type="buy">
+                            <span class="link-icon">↗</span>
+                            <span>Buy</span>
+                        </a>
+                        <a href="#" class="link-chip" data-type="article">
+                            <span class="link-icon">◎</span>
+                            <span>Analysis</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </article>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer id="footer">
+
+        <div id="footer-left">
+            <a href="#" class="footer-title">Not Quite Ayush</a>
+            <p>A quiet space for questions that don't end, and answers that quietly dissolve.</p>
+        </div>
+
+        <div class="footer-column">
+            <p class="footer-heading">Explore</p>
+            <a href="#">Garden</a>
+            <a href="#" class="active">Library</a>
+            <a href="#">Writing</a>
+            <a href="#">Screen</a>
+        </div>
+
+        <div class="footer-column">
+            <p class="footer-heading">Find Me</p>
+            <a href="https://instagram.com">Instagram</a>
+            <a href="https://linkedin.com">LinkedIn</a>
+            <a href="https://x.com">X</a>
+            <a href="https://telegram.org">Telegram</a>
+        </div>
+
+        <div class="footer-column">
+            <p class="footer-heading">Quote</p>
+            <p>"The important thing is not to stop questioning."</p>
+        </div>
+
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+have to work on the css of screen
+
+have to add a music sction(its data, design its schema to)
+
+have to add a comments feature
+
