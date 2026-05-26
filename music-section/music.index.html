@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music — N.Q.A</title>
+    <link rel="stylesheet" href="music.style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="root">
+
+    <!-- ================= NAVBAR ================= -->
+    <header>
+        <nav id="navbar">
+            <a href="../index.html" id="logo">N.Q.A</a>
+            <div id="nav-links">
+                <a href="#">Home</a>
+                <a href="#">Library</a>
+                <a href="#">Garden</a>
+                <a href="#">Writing</a>
+                <a href="#" class="active">Screen</a>
+            </div>
+            <div id="nav-buttons">
+                <button id="theme-btn">Change Theme</button>
+                <button id="signin-btn">Sign In</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ================= PAGE HEADER ================= -->
+    <section id="page-header">
+        <div class="page-header-inner">
+            <p class="section-tag">personal archive</p>
+            <h1>The <em>Music</em></h1>
+            <p class="page-subtitle">Albums that became part of how I think. Annotated, dissected, returned to.</p>
+        </div>
+        <div id="library-meta">
+            <div class="meta-stat">
+                <span class="meta-number" data-target="38">0</span>
+                <span class="meta-label">albums archived</span>
+            </div>
+            <div class="meta-divider"></div>
+            <div class="meta-stat">
+                <span class="meta-number" data-target="91">0</span>
+                <span class="meta-label">tracks marked</span>
+            </div>
+            <div class="meta-divider"></div>
+            <div class="meta-stat">
+                <span class="meta-number" data-target="14">0</span>
+                <span class="meta-label">high dopamine</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FILTER BAR ================= -->
+    <div id="filter-bar">
+        <div id="filter-inner">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="ambient">Ambient</button>
+            <button class="filter-btn" data-filter="classical">Classical</button>
+            <button class="filter-btn" data-filter="electronic">Electronic</button>
+            <button class="filter-btn" data-filter="jazz">Jazz</button>
+            <button class="filter-btn" data-filter="rock">Rock</button>
+            <button class="filter-btn" data-filter="postrock">Post-Rock</button>
+        </div>
+    </div>
+
+    <!-- ================= MUSIC LIST ================= -->
+    <main id="library-list">
+
+        <!-- ── ALBUM CARD 1 ── -->
+        <article class="book-card" data-category="ambient electronic">
+
+            <div class="book-cover-wrap">
+                <div class="book-cover" style="--cover-a:#0a0a1e;--cover-b:#1a0a2e;">
+                    <div class="cover-texture"></div>
+                    <div class="cover-title-wrap">
+                        <span class="cover-title">Selected Ambient Works Vol. II</span>
+                        <span class="cover-author">Aphex Twin</span>
+                    </div>
+                    <div class="cover-spine"></div>
+                </div>
+                <div class="book-shadow"></div>
+                <div class="book-status read">Archived</div>
+            </div>
+
+            <div class="book-body">
+
+                <!-- INFO -->
+                <div class="book-info">
+                    <div class="book-info-top">
+                        <div>
+                            <h2 class="book-title">Selected Ambient Works Volume II</h2>
+                            <p class="book-author">Aphex Twin</p>
+                        </div>
+                        <span class="book-year">1994</span>
+                    </div>
+                    <p class="book-description">
+                        An almost entirely beatless double album — more texture than music, more feeling than structure. Each track is untitled, identified only by a photograph. It sounds like the inside of a dream you forgot.
+                    </p>
+                    <div class="book-tags">
+                        <span class="tag">Ambient</span>
+                        <span class="tag">Electronic</span>
+                        <span class="tag">Drone</span>
+                    </div>
+                </div>
+
+                <div class="book-divider"></div>
+
+                <!-- WHAT I THINK -->
+                <div class="book-thoughts">
+                    <p class="thoughts-label">What I Think</p>
+                    <blockquote class="thoughts-text">
+                        This album doesn't ask to be understood — it asks to be felt. I've listened to it during the quietest, most disorienting moments of my life. It's not background music; it's a different kind of foreground.
+                    </blockquote>
+                    <div class="thoughts-rating">
+                        <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span>
+                    </div>
+
+                    <!-- FAVOURITE TRACKS -->
+                    <div class="tracks-section">
+                        <p class="tracks-label">Favourite Tracks</p>
+                        <div class="tracks-list">
+
+                            <div class="track-item">
+                                <div class="track-info">
+                                    <span class="track-num">01</span>
+                                    <div>
+                                        <span class="track-name">Rhubarb</span>
+                                        <span class="track-note">The one that feels like floating</span>
+                                    </div>
+                                </div>
+                                <div class="track-actions">
+                                    <!-- admin sets data-url and data-label; JS renders the jump button -->
+                                    <button class="jump-btn"
+                                        data-url="https://youtube.com/watch?v=example1&t=0"
+                                        data-label="From the start">
+                                        <span class="jump-icon">▷</span>
+                                        <span class="jump-text">From the start</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="track-item">
+                                <div class="track-info">
+                                    <span class="track-num">02</span>
+                                    <div>
+                                        <span class="track-name">Lichen</span>
+                                        <span class="track-note">Slow and crawling, in the best way</span>
+                                    </div>
+                                </div>
+                                <div class="track-actions">
+                                    <button class="jump-btn"
+                                        data-url="https://youtube.com/watch?v=example2&t=45"
+                                        data-label="Jump to 0:45">
+                                        <span class="jump-icon">▷</span>
+                                        <span class="jump-text">Jump to 0:45</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="track-item">
+                                <div class="track-info">
+                                    <span class="track-num">03</span>
+                                    <div>
+                                        <span class="track-name">Blue Calx</span>
+                                        <span class="track-note">The high dopamine moment</span>
+                                    </div>
+                                </div>
+                                <div class="track-actions">
+                                    <button class="jump-btn dopamine"
+                                        data-url="https://youtube.com/watch?v=example3&t=112"
+                                        data-label="Jump to 1:52">
+                                        <span class="jump-icon">⚡</span>
+                                        <span class="jump-text">Jump to 1:52</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-divider"></div>
+
+                <!-- LINKS -->
+                <div class="book-links">
+                    <p class="links-label">Listen / Reference</p>
+                    <div class="links-row">
+                        <a href="#" class="link-chip" data-type="buy">
+                            <span class="link-icon">↗</span><span>Bandcamp</span>
+                        </a>
+                        <a href="#" class="link-chip" data-type="video">
+                            <span class="link-icon">▷</span><span>YouTube</span>
+                        </a>
+                        <a href="#" class="link-chip" data-type="article">
+                            <span class="link-icon">◎</span><span>Pitchfork</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </article>
+
+        <!-- ── ALBUM CARD 2 ── -->
+        <article class="book-card" data-category="postrock ambient">
+
+            <div class="book-cover-wrap">
+                <div class="book-cover" style="--cover-a:#0f1a10;--cover-b:#1a2a0a;">
+                    <div class="cover-texture"></div>
+                    <div class="cover-title-wrap">
+                        <span class="cover-title">Lift Your Skinny Fists</span>
+                        <span class="cover-author">Godspeed You!</span>
+                    </div>
+                    <div class="cover-spine"></div>
+                </div>
+                <div class="book-shadow"></div>
+                <div class="book-status read">Archived</div>
+            </div>
+
+            <div class="book-body">
+
+                <div class="book-info">
+                    <div class="book-info-top">
+                        <div>
+                            <h2 class="book-title">Lift Your Skinny Fists Like Antennas to Heaven</h2>
+                            <p class="book-author">Godspeed You! Black Emperor</p>
+                        </div>
+                        <span class="book-year">2000</span>
+                    </div>
+                    <p class="book-description">
+                        A double album of four sprawling orchestral post-rock pieces — each building from silence to catastrophe and back. It feels like watching a civilization collapse and rise again in 87 minutes.
+                    </p>
+                    <div class="book-tags">
+                        <span class="tag">Post-Rock</span>
+                        <span class="tag">Orchestral</span>
+                        <span class="tag">Ambient</span>
+                    </div>
+                </div>
+
+                <div class="book-divider"></div>
+
+                <div class="book-thoughts">
+                    <p class="thoughts-label">What I Think</p>
+                    <blockquote class="thoughts-text">
+                        Storm is the one. That build from the quiet piano into the full wall of strings — I've replayed that moment more times than I can count. It doesn't feel like music. It feels like grief becoming beautiful.
+                    </blockquote>
+                    <div class="thoughts-rating">
+                        <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span>
+                    </div>
+
+                    <div class="tracks-section">
+                        <p class="tracks-label">Favourite Tracks</p>
+                        <div class="tracks-list">
+
+                            <div class="track-item">
+                                <div class="track-info">
+                                    <span class="track-num">01</span>
+                                    <div>
+                                        <span class="track-name">Storm</span>
+                                        <span class="track-note">Starts quiet, ends like the world ending</span>
+                                    </div>
+                                </div>
+                                <div class="track-actions">
+                                    <button class="jump-btn dopamine"
+                                        data-url="https://youtube.com/watch?v=example4&t=540"
+                                        data-label="Jump to 9:00">
+                                        <span class="jump-icon">⚡</span>
+                                        <span class="jump-text">Jump to 9:00</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="track-item">
+                                <div class="track-info">
+                                    <span class="track-num">02</span>
+                                    <div>
+                                        <span class="track-name">Sleep</span>
+                                        <span class="track-note">38 minutes of everything</span>
+                                    </div>
+                                </div>
+                                <div class="track-actions">
+                                    <button class="jump-btn"
+                                        data-url="https://youtube.com/watch?v=example5&t=0"
+                                        data-label="From the start">
+                                        <span class="jump-icon">▷</span>
+                                        <span class="jump-text">From the start</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-divider"></div>
+
+                <div class="book-links">
+                    <p class="links-label">Listen / Reference</p>
+                    <div class="links-row">
+                        <a href="#" class="link-chip" data-type="buy">
+                            <span class="link-icon">↗</span><span>Bandcamp</span>
+                        </a>
+                        <a href="#" class="link-chip" data-type="video">
+                            <span class="link-icon">▷</span><span>YouTube</span>
+                        </a>
+                        <a href="#" class="link-chip" data-type="article">
+                            <span class="link-icon">◎</span><span>Essay</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </article>
+
+        <!-- ── ALBUM CARD 3 ── -->
+        <article class="book-card" data-category="jazz classical">
+
+            <div class="book-cover-wrap">
+                <div class="book-cover" style="--cover-a:#1a100a;--cover-b:#2a1a08;">
+                    <div class="cover-texture"></div>
+                    <div class="cover-title-wrap">
+                        <span class="cover-title">A Love Supreme</span>
+                        <span class="cover-author">Coltrane</span>
+                    </div>
+                    <div class="cover-spine"></div>
+                </div>
+                <div class="book-shadow"></div>
+                <div class="book-status read">Archived</div>
+            </div>
+
+            <div class="book-body">
+
+                <div class="book-info">
+                    <div class="book-info-top">
+                        <div>
+                            <h2 class="book-title">A Love Supreme</h2>
+                            <p class="book-author">John Coltrane</p>
+                        </div>
+                        <span class="book-year">1965</span>
+                    </div>
+                    <p class="book-description">
+                        A four-part suite — Acknowledgement, Resolution, Pursuance, Psalm — recorded as an offering to God. One of the most spiritual documents in the history of recorded music. The four-note motif alone changed jazz permanently.
+                    </p>
+                    <div class="book-tags">
+                        <span class="tag">Jazz</span>
+                        <span class="tag">Spiritual</span>
+                        <span class="tag">Suite</span>
+                    </div>
+                </div>
+
+                <div class="book-divider"></div>
+
+                <div class="book-thoughts">
+                    <p class="thoughts-label">What I Think</p>
+                    <blockquote class="thoughts-text">
+                        Pursuance hits differently every time. There's a moment around the 4-minute mark where McCoy Tyner's chords drop out and it's just Coltrane and the drums — and that silence between the notes becomes the most important thing in the room.
+                    </blockquote>
+                    <div class="thoughts-rating">
+                        <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span>
+                    </div>
+
+                    <div class="tracks-section">
+                        <p class="tracks-label">Favourite Tracks</p>
+                        <div class="tracks-list">
+
+                            <div class="track-item">
+                                <div class="track-info">
+                                    <span class="track-num">01</span>
+                                    <div>
+                                        <span class="track-name">Pursuance</span>
+                                        <span class="track-note">When silence becomes the music</span>
+                                    </div>
+                                </div>
+                                <div class="track-actions">
+                                    <button class="jump-btn dopamine"
+                                        data-url="https://youtube.com/watch?v=example6&t=242"
+                                        data-label="Jump to 4:02">
+                                        <span class="jump-icon">⚡</span>
+                                        <span class="jump-text">Jump to 4:02</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="track-item">
+                                <div class="track-info">
+                                    <span class="track-num">02</span>
+                                    <div>
+                                        <span class="track-name">Acknowledgement</span>
+                                        <span class="track-note">The four-note motif that starts everything</span>
+                                    </div>
+                                </div>
+                                <div class="track-actions">
+                                    <button class="jump-btn"
+                                        data-url="https://youtube.com/watch?v=example7&t=0"
+                                        data-label="From the start">
+                                        <span class="jump-icon">▷</span>
+                                        <span class="jump-text">From the start</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-divider"></div>
+
+                <div class="book-links">
+                    <p class="links-label">Listen / Reference</p>
+                    <div class="links-row">
+                        <a href="#" class="link-chip" data-type="buy">
+                            <span class="link-icon">↗</span><span>Buy</span>
+                        </a>
+                        <a href="#" class="link-chip" data-type="video">
+                            <span class="link-icon">▷</span><span>YouTube</span>
+                        </a>
+                        <a href="#" class="link-chip" data-type="article">
+                            <span class="link-icon">◎</span><span>Deep Dive</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </article>
+
+        <!-- ── ALBUM CARD 4 ── -->
+        <article class="book-card" data-category="electronic ambient">
+
+            <div class="book-cover-wrap">
+                <div class="book-cover" style="--cover-a:#0a1520;--cover-b:#102030;">
+                    <div class="cover-texture"></div>
+                    <div class="cover-title-wrap">
+                        <span class="cover-title">Disintegration Loops</span>
+                        <span class="cover-author">Basinski</span>
+                    </div>
+                    <div class="cover-spine"></div>
+                </div>
+                <div class="book-shadow"></div>
+                <div class="book-status reading">Listening</div>
+            </div>
+
+            <div class="book-body">
+
+                <div class="book-info">
+                    <div class="book-info-top">
+                        <div>
+                            <h2 class="book-title">The Disintegration Loops</h2>
+                            <p class="book-author">William Basinski</p>
+                        </div>
+                        <span class="book-year">2002</span>
+                    </div>
+                    <p class="book-description">
+                        Old magnetic tapes played as they physically decayed — the music literally dying as it was recorded. Basinski watched the World Trade Center burn from his Brooklyn rooftop while this played. Time made audible.
+                    </p>
+                    <div class="book-tags">
+                        <span class="tag">Ambient</span>
+                        <span class="tag">Decay</span>
+                        <span class="tag">Electronic</span>
+                    </div>
+                </div>
+
+                <div class="book-divider"></div>
+
+                <div class="book-thoughts">
+                    <p class="thoughts-label">What I Think</p>
+                    <blockquote class="thoughts-text">
+                        This is music about entropy. The loop starts almost beautiful, and you watch — or rather listen — as it slowly loses itself. By the end, you've witnessed something dying. I don't know how to describe that without it sounding morbid, because it isn't.
+                    </blockquote>
+                    <div class="thoughts-rating">
+                        <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span>
+                    </div>
+
+                    <div class="tracks-section">
+                        <p class="tracks-label">Favourite Tracks</p>
+                        <div class="tracks-list">
+
+                            <div class="track-item">
+                                <div class="track-info">
+                                    <span class="track-num">01</span>
+                                    <div>
+                                        <span class="track-name">dlp 1.1</span>
+                                        <span class="track-note">Still intact — before the decay takes over</span>
+                                    </div>
+                                </div>
+                                <div class="track-actions">
+                                    <button class="jump-btn"
+                                        data-url="https://youtube.com/watch?v=example8&t=0"
+                                        data-label="From the start">
+                                        <span class="jump-icon">▷</span>
+                                        <span class="jump-text">From the start</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="track-item">
+                                <div class="track-info">
+                                    <span class="track-num">02</span>
+                                    <div>
+                                        <span class="track-name">dlp 2.1</span>
+                                        <span class="track-note">Where it starts to fall apart</span>
+                                    </div>
+                                </div>
+                                <div class="track-actions">
+                                    <button class="jump-btn dopamine"
+                                        data-url="https://youtube.com/watch?v=example9&t=900"
+                                        data-label="Jump to 15:00">
+                                        <span class="jump-icon">⚡</span>
+                                        <span class="jump-text">Jump to 15:00</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-divider"></div>
+
+                <div class="book-links">
+                    <p class="links-label">Listen / Reference</p>
+                    <div class="links-row">
+                        <a href="#" class="link-chip" data-type="buy">
+                            <span class="link-icon">↗</span><span>Buy</span>
+                        </a>
+                        <a href="#" class="link-chip" data-type="video">
+                            <span class="link-icon">▷</span><span>YouTube</span>
+                        </a>
+                        <a href="#" class="link-chip" data-type="wiki">
+                            <span class="link-icon">⊕</span><span>Context</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </article>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer id="footer">
+        <div id="footer-left">
+            <a href="#" class="footer-title">Not Quite Ayush</a>
+            <p>A quiet space for questions that don't end, and answers that quietly dissolve.</p>
+        </div>
+        <div class="footer-column">
+            <p class="footer-heading">Explore</p>
+            <a href="#">Garden</a>
+            <a href="#">Library</a>
+            <a href="#">Writing</a>
+            <a href="#" class="active">Screen</a>
+        </div>
+        <div class="footer-column">
+            <p class="footer-heading">Find Me</p>
+            <a href="https://instagram.com">Instagram</a>
+            <a href="https://linkedin.com">LinkedIn</a>
+            <a href="https://x.com">X</a>
+            <a href="https://telegram.org">Telegram</a>
+        </div>
+        <div class="footer-column">
+            <p class="footer-heading">Quote</p>
+            <p>"Music is the silence between the notes."</p>
+        </div>
+    </footer>
+
+</div>
+
+<script src="music.script.js"></script>
+</body>
+</html>
